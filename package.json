@@ -1,0 +1,29 @@
+{
+  "name": "devl",
+  "version": "1.0.0",
+  "description": "",
+  "main": "dist/index.js",
+  "scripts": {
+    "start:dev:producer": "nodemon kafka-producer.ts",
+    "start:dev:consumer": "nodemon kafka-consumer.ts",
+    "start:dev": "concurrently \"nodemon kafka-consumer.ts\" \"nodemon kafka-producer.ts\"",
+    "start:producer": "node dist/kafka-producer.js",
+    "start:consumer": "node dist/kafka-consumer.js",
+    "build": "tsc",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.17.1",
+    "kafkajs": "^1.15.0"
+  },
+  "devDependencies": {
+    "@types/express": "^4.17.11",
+    "concurrently": "^5.3.0",
+    "nodemon": "^2.0.7",
+    "ts-node": "^9.1.1",
+    "typescript": "^4.1.3"
+  }
+}
